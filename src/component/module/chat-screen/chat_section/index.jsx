@@ -15,7 +15,7 @@ const ChatSection = ({  messages }) =>
                                 item.typeuser === 'audio' ?
                                     <View className='justify-end items-end'>
                                         <TouchableOpacity className='bg-[#fff] mt-[8px] rounded-[8px] p-[6px] max-w-[200px] mx-[16px]' onPress={() => playAudio(item.filePath)}>
-                                            <TextComponent css="text-[12px] font-[400] font-[600] text-[#000]" text='Play Audio' />
+                                        <TextComponent css="text-[12px] font-[400] font-[600] text-[#000]" text='Play Audio' />
                                         </TouchableOpacity>
                                     </View>
                                     :
