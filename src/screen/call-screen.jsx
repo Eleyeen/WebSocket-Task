@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { SafeAreaView, View, Text, Button, StyleSheet } from "react-native";
+import { SafeAreaView, View, TouchableOpacity } from "react-native";
 import { RTCIceCandidate, RTCPeerConnection, RTCSessionDescription, mediaDevices } from "react-native-webrtc";
 import TextComponent from "../component/global/text-component";
+import { Callendicon, Micicon, Profileicon, Speakericon } from "../../static-img-url";
 const SIGNALING_SERVER_URL = "wss://app.openhome.xyz/websocket/shared-personality?token=eyJ1c2VyX2lkIjoxLCJwZXJzb25hbGl0eV9pZCI6MzEwNiwiZXhwaXJlc190aW1lIjpudWxsfQ.Z0B7yA.ISehLPk6tuQ1w0xU6En1gBXlvCA&demo=true";
 
-const CallScreen = () => {
+const CallScreen = ({ navigation }) => {
     const [isCallActive, setIsCallActive] = useState(false);
     const [isConnected, setIsConnected] = useState(false);
     const [localStream, setLocalStream] = useState(null);
@@ -19,7 +20,12 @@ const CallScreen = () => {
 
         socket.current.onopen = () => {
             console.log("WebSocket connected");
+
             setIsConnected(true);
+
+            startCall();
+
+
         };
 
         socket.current.onmessage = async (message) => {
@@ -38,10 +44,12 @@ const CallScreen = () => {
             console.error("WebSocket error:", error);
         };
 
+
         return () => {
             if (socket.current) socket.current.close();
         };
     }, []);
+
 
     const startCall = async () => {
         try {
@@ -107,6 +115,7 @@ const CallScreen = () => {
             remoteStream.getTracks().forEach((track) => track.stop());
             setRemoteStream(null);
         }
+        navigation.pop()
 
         setIsCallActive(false);
     };
@@ -174,35 +183,39 @@ const CallScreen = () => {
     };
 
     return (
-        <SafeAreaView className="flex-1" >
-            <View>
-                <TextComponent css="text-[16px] font-[600] text-[#000]" text='Openhome' />
-                <TextComponent css="text-[12px] font-[400]  text-[#000]" text='End-to-end encrypted' />
+        <SafeAreaView className="flex-1  bg-white" >
+            <View className='flex-1 w-full items-center justify-center'>
+
+                <View className='absolute top-0 '>
+
+                    <TextComponent css="text-[16px] text-center font-[600] text-[#000]" text='Openhome' />
+                    <TextComponent css="text-[12px] text-center font-[400]  text-[#000]" text='End-to-end encrypted' />
 
 
+                </View>
+
+                <View className='mt-[300px]'>
+                    <Profileicon width={200} hieght={200} />
+                </View>
+
+                <View className='flex-row '>
+                    <TouchableOpacity>
+                        <Speakericon width={40} hieght={40} />
+                    </TouchableOpacity>
+                    <TouchableOpacity className='mx-[20]'>
+                        <Micicon width={40} hieght={40} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => endCall()} >
+                        <Callendicon width={40} hieght={40} />
+                    </TouchableOpacity>
+
+                </View>
+
             </View>
-            <View>
-                <Text style={styles.title}>
-                    WebRTC Voice Call {isCallActive ? "(Active)" : "(Idle)"}
-                </Text>
-                <Button title="Start Call" onPress={startCall} disabled={isCallActive || !isConnected} />
-                <Button title="End Call" onPress={endCall} disabled={!isCallActive} />
-            </View>
+
+
         </SafeAreaView>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5F5F5",
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 20,
-    },
-});
 
 export default CallScreen;

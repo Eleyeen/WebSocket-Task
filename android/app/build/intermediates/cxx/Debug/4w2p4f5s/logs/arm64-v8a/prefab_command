@@ -15,8 +15,8 @@
   --ndk-version \
   26 \
   --output \
-  /var/folders/pr/2jrghncn6_s_896h1_99syq40000gn/T/agp-prefab-staging6253448714471839074/staged-cli-output \
+  /var/folders/pr/2jrghncn6_s_896h1_99syq40000gn/T/agp-prefab-staging1585499307149088869/staged-cli-output \
   /Users/mac/.gradle/caches/8.8/transforms/1f00369f60fb558f4c67464032b9f89f/transformed/react-android-0.75.4-debug/prefab \
-  /Users/mac/Documents/WebSocketChatApp/android/app/build/intermediates/cxx/refs/react-native-reanimated/2k1c4f68 \
+  /Users/mac/Documents/WebSocketChatApp/android/app/build/intermediates/cxx/refs/react-native-reanimated/50112z3u \
   /Users/mac/.gradle/caches/8.8/transforms/515a483ddc10df7764635ab8f497d657/transformed/hermes-android-0.75.4-debug/prefab \
   /Users/mac/.gradle/caches/8.8/transforms/fb92af41f860783fe60d03c1e1dbd7ef/transformed/fbjni-0.6.0/prefab
