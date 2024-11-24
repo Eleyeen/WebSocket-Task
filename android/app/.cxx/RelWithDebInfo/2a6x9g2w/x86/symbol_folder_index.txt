@@ -1,0 +1,1 @@
+/Users/mac/Documents/WebSocketChatApp/android/app/build/intermediates/cxx/RelWithDebInfo/2a6x9g2w/obj/x86

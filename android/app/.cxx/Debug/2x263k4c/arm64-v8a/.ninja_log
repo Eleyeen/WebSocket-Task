@@ -1,0 +1,5 @@
+# ninja log v5
+1	29	0	/Users/mac/Documents/WebSocketChatApp/android/app/.cxx/Debug/2x263k4c/arm64-v8a/CMakeFiles/cmake.verify_globs	4ddc02098fd63b46
+0	1782	1732313833201774088	CMakeFiles/appmodules.dir/Users/mac/Documents/WebSocketChatApp/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	af88a9d8b1899fc2
+1	2006	1732313833439204881	CMakeFiles/appmodules.dir/OnLoad.cpp.o	41efa1d50cf6aab3
+2006	2134	1732313833571002976	/Users/mac/Documents/WebSocketChatApp/android/app/build/intermediates/cxx/Debug/2x263k4c/obj/arm64-v8a/libappmodules.so	dc55862b011cb556

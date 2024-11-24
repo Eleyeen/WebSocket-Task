@@ -1,0 +1,13 @@
+export { default as SplashIcon} from './assets/svg/splashicon.svg'
+export { default as Menuicon} from './assets/svg/menuicon.svg'
+export { default as Cameraicon} from './assets/svg/cameraicon.svg'
+export { default as Pluscircleicon} from './assets/svg/pluscircleicon.svg'
+export { default as Backarrow} from './assets/svg/backarrow.svg'
+export { default as Callicon} from './assets/svg/callicon.svg'
+export { default as Voiceicon} from './assets/svg/voiceicon.svg'
+
+export { default as Speakericon} from './assets/svg/speakericon.svg'
+export { default as Callendicon} from './assets/svg/callendicon.svg'
+export { default as Micicon} from './assets/svg/micicon.svg'
+export { default as Sendicon} from './assets/svg/sendicon.svg'
+export { default as Profileicon} from './assets/svg/profile.svg'

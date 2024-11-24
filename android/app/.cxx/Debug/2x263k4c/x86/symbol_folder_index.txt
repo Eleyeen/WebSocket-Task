@@ -1,0 +1,1 @@
+/Users/mac/Documents/WebSocketChatApp/android/app/build/intermediates/cxx/Debug/2x263k4c/obj/x86

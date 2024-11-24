@@ -1,0 +1,11 @@
+/Users/mac/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /Users/mac/Documents/WebSocketChatApp/android/app/.cxx/RelWithDebInfo/2a6x9g2w/x86_64 \
+  appmodules \
+  react_codegen_RNCGeolocationSpec \
+  react_codegen_RNPermissionsSpec \
+  react_codegen_rngesturehandler_codegen \
+  react_codegen_rnreanimated \
+  react_codegen_rnscreens \
+  react_codegen_rnsvg \
+  react_codegen_safeareacontext
